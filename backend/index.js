@@ -18,6 +18,12 @@ app.get("/", (req, res) => {
   res.send("Hello 👋 I am Working Fine 🚀");
 });
 
+app.use("/media", express.static(path.join(__dirname, "media")));
+
+app.use("/api/branch", require("./routes/branch.route"));
+app.use("/api/exam", require("./routes/exam.route"));
+app.use("/api/marks", require("./routes/marks.route"));
+
 
 app.listen(port, () => {
   console.log(`Server Listening On http://localhost:${port}`);

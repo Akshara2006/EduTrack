@@ -27,6 +27,8 @@ app.use("/api/material", require("./routes/material.route"));
 app.use("/api/notice", require("./routes/notice.route"));
 app.use("/api/subject", require("./routes/subject.route"));
 app.use("/api/timetable", require("./routes/timetable.route"));
+app.use("/api/admin", require("./routes/details/admin-details.route"));
+app.use("/api/faculty", require("./routes/details/faculty-details.route"));
 
 
 
